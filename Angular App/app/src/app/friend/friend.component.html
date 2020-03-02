@@ -1,0 +1,79 @@
+<div class="row">
+    <div class="col s12">
+      <div class="card">
+        <div class="card-content white-text">
+          <div class="row">
+            <div class="col s5">
+                <form #friendForm="ngForm" (ngSubmit)="onSubmit(friendForm)">
+                    <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="friendService.selectedFriend._id">
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                          <input type="text" name="FriendID" #name="ngModel" [(ngModel)]="friendService.selectedFriend.FriendID" placeholder="Enter FriendID" required>
+                          <label>Friend ID :
+                            <label class="red-text">*</label>
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <input type="text" name="FriendName" #name="ngModel" [(ngModel)]="friendService.selectedFriend.FriendName" placeholder="Enter Friend Name" required>
+                          <label>Friend Name :
+                            <label class="red-text">*</label>
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <input type="text" name="Place" #name="ngModel" [(ngModel)]="friendService.selectedFriend.Place" placeholder="Enter Place" required>
+                          <label>Place :
+                            <label class="red-text">*</label>
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <button class="btn btn-custom right" type="button" (click)="resetForm(friendForm)">Reset</button>
+                          <button class="btn btn-custom right" type="submit" [disabled]="!friendForm.valid">Submit</button>
+                        </div>
+                      </div>
+
+                </form>
+              
+            </div>
+            <div class="col s7">
+            
+                <table class="responsive-table highlight">
+                    <thead>
+                      <tr>
+                        <th>Friend ID</th>
+                        <th>Friend Name</th>
+                        <th>Place</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tr *ngFor="let frnd of friendService.Friends">
+                      <td>{{frnd.FriendID}}</td>
+                      <td>{{frnd.FriendName}}</td>
+                      <td>{{frnd.Place}}</td>
+                      <td>
+                          <a class="action-btn" (click)="onEdit(frnd)"> 
+                            <i class="material-icons">edit</i>
+                          </a>
+                          <a class="action-btn" (click)="onDelete(frnd._id,friendForm)">
+                            <i class="material-icons">delete</i>
+                          </a>
+                        </td>
+                    </tr>
+                  </table>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
