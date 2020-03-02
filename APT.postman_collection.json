@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "2b124a64-6a22-4527-bcab-827e9fca7746",
+		"name": "APT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/Friends/list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/Friends/list",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Friends",
+						"list"
+					],
+					"query": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/Friends/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"FriendID\": 102,\r\n    \"FriendName\": \"Yuvraj Singh\",\r\n    \"Place\": \"Jaunpur\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/Friends/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Friends",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/Friends/update/5e5bcc0828d064402cb0b61e",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"FriendID\": 102,\n    \"FriendName\": \"Yuvraj Singh\",\n    \"Place\": \"Jaunpur Uttar Pradesh\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/Friends/update/5e5bcc0828d064402cb0b61e",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Friends",
+						"update",
+						"5e5bcc0828d064402cb0b61e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/Friends/delete/5e5bcc0828d064402cb0b61e",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/Friends/delete/5e5bcc0828d064402cb0b61e",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Friends",
+						"delete",
+						"5e5bcc0828d064402cb0b61e"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
