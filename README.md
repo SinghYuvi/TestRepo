@@ -12,6 +12,5 @@ cors
 # Postman Collection File
 Postman collection is also shared in this project File name:  APT.postman_collection.json
 
-# Front end look
 
 
