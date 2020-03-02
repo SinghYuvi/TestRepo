@@ -41,7 +41,6 @@ export class FriendComponent implements OnInit {
       });
     }
     else{
-      console.log(form);
       this.friendService.putFriend(form.value).subscribe((res) =>{
       this.resetForm(form);
       this.refreshFriendList();
@@ -69,7 +68,6 @@ export class FriendComponent implements OnInit {
 
   onEdit(frnd: Friend) {
   this.friendService.selectedFriend = frnd;
-  console.log(frnd);
   }
 
 }

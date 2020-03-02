@@ -41,8 +41,8 @@ router.post('/create',(req,res) =>{
 });
 
 //Update Friends details/ => localhost:3000/Friends/update/id
-router.put('/update/:id', (req,res) =>{
-    console.log(req.params);
+router.put('/update/:_id', (req,res) =>{
+    console.log(req.params._id);
     if(!ObjectId.isValid(req.params.id))
     return res.status(400).send(`No record with given id: ${req.params.id}`);
     var frnd = {
